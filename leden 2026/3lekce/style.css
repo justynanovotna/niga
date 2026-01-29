@@ -1,0 +1,30 @@
+.fuhnaw{
+    background: yellow;
+    width: 400px;
+    height: 400px;
+    color: brown;
+    display: grid;
+    place-items:center;
+    border-radius: 10cm;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+}
+section {
+    margin: 18px;
+    padding: 20px;
+}
+.parent{
+    width: 200px;
+    height: 200px;
+    background: pink;
+
+}
+.child {
+    width: 50%;
+    height: 50%;
+    background: lightseagreen;
+}
