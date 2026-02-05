@@ -69,3 +69,29 @@ section {
     border: 5px solid turquoise;
 
 }
+.box {
+    background-color: lightcoral;
+    height: 50px;
+    width: 60px;
+    padding: 30px;
+    margin: 20px auto;
+    display: grid;
+    place-items: center;
+
+}
+.demo {
+    background-color: rgb(44, 44, 187);
+    width: 150px;
+    height: 45px;
+    padding-bottom: 60px;
+    margin-top: 20px;
+    display: grid;
+    place-items: center;
+    place-self: bottom;
+    border-bottom-style:double ;
+    border-color: rgb(41, 163, 204);
+    border-left-style:dashed ;
+    font-style: italic;
+    font-size:x-large;
+    border-radius: 20px;
+}
