@@ -27,4 +27,45 @@ section {
     width: 50%;
     height: 50%;
     background: lightseagreen;
+    display: grid;
+    place-items: center;
+    place-self: center;
+
+}
+.panel {
+    background-color: rgb(186, 79, 236);
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    place-self: center;
+    border-width: 10px;/*tloušťka*/
+    border-color: chocolate;
+    margin-bottom: 16px;
+    border-style: double;
+
+}
+.mix {
+    background-color: darkslategray;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    border-width: 10px;/*tloušťka*/
+    border-color: hotpink;
+    border-left-style: dashed;
+    border-bottom-left-radius: 2cm;
+    place-self: center;
+    border-right-style:dotted;
+
+}
+.card {
+    background-color: rgb(133, 223, 223);
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    place-self: center;
+    border: 5px solid turquoise;
+
 }
