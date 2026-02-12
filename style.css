@@ -1,0 +1,12 @@
+.blebleble{
+    display: grid;
+    place-items: center;
+    background-color: rgb(97, 189, 201);
+    border-radius: 20%;
+}
+
+.idk{
+    background-color: khaki;
+    width: 700px;
+    height: 500px;
+}

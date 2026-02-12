@@ -1,0 +1,20 @@
+div {
+    background-color: rgb(133, 86, 207);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 75px;
+}
+.info {
+    color: rgb(199, 233, 47);
+}
+.warning {
+    color: aqua;
+    font-weight: bold;
+}
+#warning {
+    color: aqua;
+    font-weight: bold;
+}
+p:last-child{
+    color: rgb(64, 219, 16);
+}
