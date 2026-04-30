@@ -1,0 +1,246 @@
+/* HERO SEKCE */
+.hero {
+    height: 90vh;
+    background: url("https://scontent-prg1-1.xx.fbcdn.net/v/t39.30808-6/482082338_3967029596875464_3547012776598765557_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=Nn_Mi7a0YO4Q7kNvwGaxOyY&_nc_oc=AdpP_-MQ5SKkna_JjbalJegqH3ePFa9d0Djl9RDDfOUv0iM0sceWjX3IvtP9MBiAreY&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&_nc_gid=4KA_QMdf560NxlK6Rb9LoA&_nc_ss=7b289&oh=00_Af3Rm4-TJp8AxGHdks8oBkf-Vt2Ihn1c2gUrJGglQI4yFA&oe=69F908FF") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* tmavý overlay aby byl text čitelný */
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+}
+
+/* text přes obrázek */
+.hero-text {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 70px;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* jemný zoom efekt */
+.hero:hover {
+    transform: scale(1.02);
+    transition: 1s;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 100vh;
+    background: url("https://scontent-prg1-1.xx.fbcdn.net/v/t39.30808-6/482082338_3967029596875464_3547012776598765557_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=Nn_Mi7a0YO4Q7kNvwGaxOyY&_nc_oc=AdpP_-MQ5SKkna_JjbalJegqH3ePFa9d0Djl9RDDfOUv0iM0sceWjX3IvtP9MBiAreY&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&_nc_gid=4KA_QMdf560NxlK6Rb9LoA&_nc_ss=7b289&oh=00_Af3Rm4-TJp8AxGHdks8oBkf-Vt2Ihn1c2gUrJGglQI4yFA&oe=69F908FF") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* overlay */
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.95));
+}
+
+/* text */
+.hero-text {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-text h1 {
+    font-size: 70px;
+}
+
+/* glow efekt */
+.glow {
+    transition: 0.3s;
+}
+
+.glow:hover {
+    color: #00f0ff;
+    text-shadow:
+        0 0 10px #00f0ff,
+        0 0 20px #00f0ff,
+        0 0 40px #00f0ff;
+    transform: scale(1.1);
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 0.8;
+    letter-spacing: 2px;
+}
+
+/* animace */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== KARTY ===== */
+.card {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* hover efekt */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 30px rgba(0,240,255,0.3);
+}
+
+/* světelný sweep */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0,255,255,0.3), transparent);
+    top: 0;
+    left: -150%;
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    left: 150%;
+}
+
+/* texty */
+h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+h2:hover {
+    color: #00f0ff;
+    transform: translateX(10px);
+}
+
+p {
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* ===== BUTTON ===== */
+.center {
+    text-align: center;
+    margin: 50px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #00f0ff;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background: #00f0ff;
+    color: black;
+    box-shadow: 0 0 20px #00f0ff;
+    transform: scale(1.1);
+}
+
+/* sweep efekt */
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+    top: 0;
+    left: -150%;
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    left: 150%;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.5;
+}
+
+/* ===== PLovouCÍ NOTY ===== */
+body::before {
+    content: "♪ ♫ ♬";
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    font-size: 50px;
+    opacity: 0.05;
+    animation: float 6s ease-in-out infinite;
+}
+
+body::after {
+    content: "♩ ♫";
+    position: fixed;
+    bottom: 15%;
+    right: 5%;
+    font-size: 50px;
+    opacity: 0.05;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
