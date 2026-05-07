@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    background: black;
+    overflow-x: hidden;
+}
+
+/* Animované pozadí */
+.background {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #1a1a1a, #000);
+    animation: moveBg 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveBg {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(-10%, -10%); }
+    100% { transform: translate(0,0); }
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Glow efekt na jméno */
+.glow {
+    font-size: 60px;
+    transition: 0.3s;
+}
+
+
+
+.glow:hover {
+    color: #fff9a0;
+    text-shadow:
+        0 0 10px #ffae00,
+        0 0 20px #ffae00,
+        0 0 40px #ff0000;
+    transform: scale(1.1);
+}
+
+/* Subtitle */
+.subtitle {
+    margin-top: 10px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.subtitle:hover {
+    opacity: 1;
+    letter-spacing: 3px;
+}
+
+/* Karty */
+.card {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover animace */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 174, 0, 0.3);
+}
+
+/* Světelný efekt při hoveru */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(120deg, transparent, rgba(255, 174, 0, 0.479), transparent);
+    transform: rotate(25deg);
+    top: -100%;
+    left: -100%;
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+/* Nadpisy */
+h2 {
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+h2:hover {
+    color: #ff9100;
+    transform: translateX(10px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.6;
+}
+
+/* Plovoucí noty */
+body::before {
+    content: "♪ ♫ ♬";
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    font-size: 50px;
+    opacity: 0.05;
+    animation: float 6s ease-in-out infinite;
+}
+
+body::after {
+    content: "♩ ♫";
+    position: fixed;
+    bottom: 20%;
+    right: 10%;
+    font-size: 50px;
+    opacity: 0.05;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.center {
+    text-align: center;
+    margin: 40px;
+}
+
+/* EPIC BUTTON */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #ff8800;
+    border-radius: 30px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* glow efekt */
+.btn:hover {
+    background: #ff8800;
+    color: black;
+    box-shadow: 0 0 20px #ff5e00;
+    transform: scale(1.1);
+}
+
+/* animovaný "light sweep" */
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+    top: 0;
+    left: -150%;
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    left: 150%;
+}
